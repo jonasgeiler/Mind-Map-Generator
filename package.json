@@ -1,0 +1,19 @@
+{
+	"scripts": {
+		"start": "webpack --mode development -w -d",
+		"build": "webpack --mode production"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.7.7",
+		"@babel/plugin-transform-runtime": "^7.7.6",
+		"@babel/preset-env": "^7.7.7",
+		"babel-loader": "^8.1.0",
+		"webpack": "^4.42.1",
+		"webpack-cli": "^3.3.11",
+		"@babel/runtime": "^7.7.7",
+		"chokidar": "^3.4.0"
+	},
+	"dependencies": {
+		"uikit": "^3.5.3"
+	}
+}
