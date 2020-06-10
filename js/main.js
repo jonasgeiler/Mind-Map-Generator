@@ -35,28 +35,12 @@ const DATA = {
 	struct: CONS.MAP,
 };
 
-
-const setColor = (() => {
-	const colors = [];
-	return (node) => {
-		const i = node.depth || 0;
-		if (colors[i] === undefined) {
-			colors[i] = getRandColor();
-		}
-		node.color = colors[i];
-		if (node.children) {
-			node.children.forEach(setColor);
-		}
-	};
-})();
-
 const mindMap = document.getElementById('mind-map');
 const textArea = document.getElementById('text-area');
 
 const renderMindMap = () => {
 	const root = parser(DATA.text);
 	root.struct = DATA.struct;
-	setColor(root);
 	render(mindMap, root);
 };
 
