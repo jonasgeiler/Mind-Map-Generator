@@ -23,7 +23,7 @@ jobs:
     - name: Create CNAME 🔗
       run: echo "mindmap.skayo.dev" > ./dist/CNAME
     - name: Copy index.html 📋
-      run: cp index.html ./dist/
+      run: sed -i 's/dist//g' index.html && cp index.html ./dist/
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@3.5.3
       with:
