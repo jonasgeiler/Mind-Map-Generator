@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+		<title>Mind Map Generator</title>
+
+		<style>
+			html {
+				font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 1.5;
+				-webkit-text-size-adjust: 100%;
+				background: #fff;
+				color: #666;
+			}
+
+			body {
+				margin: 0;
+			}
+
+			.sk-height-viewport {
+				max-height: 100vh;
+				min-height: 50vh;
+			}
+
+			.sk-textarea {
+				padding: 20px;
+				box-sizing: border-box;
+				margin: 0;
+				border-radius: 0;
+				font: inherit;
+				-webkit-appearance: none;
+				overflow: auto;
+				vertical-align: top;
+				max-width: 100%;
+				width: 100%;
+				background: #fff;
+				color: #666;
+				border: 1px solid #e5e5e5;
+				transition: .2s ease-in-out;
+				transition-property: color,background-color,border;
+			}
+
+			.sk-textarea:focus {
+				outline: 0;
+				background-color: #fff;
+				color: #666;
+				border-color: #1e87f0;
+			}
+
+			.sk-monospace {
+				font-family: Consolas, monaco, monospace;
+			}
+
+			.sk-resize-none {
+				resize: none;
+			}
+
+			.sk-height-1-1 {
+				height: 50vh;
+			}
+
+			.sk-overflow-auto {
+				overflow: auto;
+				-webkit-overflow-scrolling: touch;
+			}
+
+			.sk-container {
+				display: flex;
+				flex-direction: column;
+			}
+
+			.sk-left-half {
+				flex: 1;
+			}
+
+			.sk-right-half {
+				flex: 1;
+			}
+
+			@media (min-width: 960px) {
+				.sk-height-1-1 {
+					height: 100%;
+				}
+
+				.sk-container {
+					flex-direction: row;
+				}
+
+				.sk-left-half {
+					flex-grow: 1;
+				}
+
+				.sk-right-half {
+					flex-grow: 2;
+				}
+			}
+
+			@media (min-width: 1200px) {
+				.sk-left-half {
+					flex-grow: 1;
+				}
+
+				.sk-right-half {
+					flex-grow: 3;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="sk-container">
+			<div class="sk-left-half sk-height-viewport">
+				<textarea class="sk-textarea sk-monospace sk-height-1-1 sk-resize-none" id="text-area"></textarea>
+			</div>
+
+			<div class="sk-right-half sk-overflow-auto sk-height-viewport">
+				<div id="mind-map"></div>
+			</div>
+		</div>
+
+		<script src="dist/bundle.js"></script>
+	</body>
+
+</html>
