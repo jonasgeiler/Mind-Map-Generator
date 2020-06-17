@@ -83,6 +83,39 @@
 				flex: 1;
 			}
 
+			.sk-fixed-bottom-right {
+				position: fixed;
+				bottom: 20px;
+				right: 20px;
+				z-index: 99;
+			}
+
+			.sk-button {
+				outline: none;
+				background-color: #000;
+				color: #fff;
+				cursor: pointer;
+				margin: 0;
+				border: none;
+				overflow: visible;
+				-webkit-appearance: none;
+				border-radius: 0;
+				display: inline-block;
+				box-sizing: border-box;
+				padding: 0 30px;
+				vertical-align: middle;
+				font-size: 14px;
+				line-height: 38px;
+				text-align: center;
+				text-decoration: none;
+				transition: .1s ease-in-out;
+				transition-property: background-color;
+			}
+
+			.sk-button:hover {
+				background-color: #151515;
+			}
+
 			@media (min-width: 960px) {
 				.sk-height-1-1 {
 					height: 100%;
@@ -122,6 +155,10 @@
 			<div class="sk-right-half sk-overflow-auto sk-height-viewport">
 				<div id="mind-map"></div>
 			</div>
+		</div>
+
+		<div class="sk-fixed-bottom-right">
+			<a id="download-button" class="sk-button">DOWNLOAD</a>
 		</div>
 
 		<script src="dist/bundle.js"></script>
