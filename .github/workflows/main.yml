@@ -25,7 +25,7 @@ jobs:
     - name: Copy index.html 📋
       run: sed -i 's/dist//g' index.html && cp index.html ./dist/
     - name: Deploy 🚀
-      uses: JamesIves/github-pages-deploy-action@3.5.3
+      uses: JamesIves/github-pages-deploy-action@3.7.1
       with:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BRANCH: gh-pages
